@@ -4,7 +4,7 @@ import org.junit.Assert;
 import org.junit.Test;
 
 /**
- * @author eherrera
+ * @author eherrera.
  * 
  */
 public class DummyTest {
