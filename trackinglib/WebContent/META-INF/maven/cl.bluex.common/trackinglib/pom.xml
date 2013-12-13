@@ -1,0 +1,60 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>cl.bluex.common</groupId>
+  <artifactId>trackinglib</artifactId>
+  <version>1.0.0</version>
+  <packaging>war</packaging>
+  <name>Tracking lib</name>
+  <description>Proyectos Comunes  Tracking</description>
+  <build>
+    <plugins>
+      <plugin>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.0</version>
+        <configuration>
+          <source>1.6</source>
+          <target>1.6</target>
+        </configuration>
+      </plugin>
+      <plugin>
+         <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-war-plugin</artifactId>
+        <configuration>
+					<archive>
+						<manifestFile>src/main/webapp/META-INF/MANIFEST.MF</manifestFile>
+					</archive>
+					<warName>samlib</warName>
+					<webXml>src/main/webapp/WEB-INF/web.xml</webXml>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+  
+  <dependencies>
+  	<dependency>
+  		<groupId>cl.bluex.tracking</groupId>
+  		<artifactId>trackingmodel</artifactId>
+  		<version>1.0.0</version>
+  	</dependency>
+  	<dependency>
+  		<groupId>cl.bluex.tracking</groupId>
+  		<artifactId>trackingpersistencia</artifactId>
+  		<version>1.0.0</version>
+  	</dependency>
+  </dependencies>
+  <distributionManagement>
+		<repository>
+			<id>central</id>
+			<name>imagemaker-releases</name>
+			<url>http://artifactory.imagemaker.cl/artifactory/imagemaker</url>
+		</repository>
+		<snapshotRepository>
+			<id>snapshots</id>
+			<name>imagemaker-snapshots</name>
+			<url>http://artifactory.imagemaker.cl/artifactory/imagemaker</url>
+		</snapshotRepository>
+	</distributionManagement>
+  <scm>
+  	<connection>scm:svn:https://repo.imit.cl/svn/Desarrollo/BlueExpress/src/common/trackinglib</connection>
+  </scm>
+</project>
